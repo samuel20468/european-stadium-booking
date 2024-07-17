@@ -1,0 +1,140 @@
+/* Navbar.module.css */
+.menuToggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #11111f;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 450px;
+  margin-right: -50px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  margin-left: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #c1a01e;
+}
+
+.imgUser {
+  width: 100%;
+}
+
+.userIcon {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #c1a01e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.userIcon:hover {
+  border-color: #ffffff;
+}
+
+.icon {
+  height: 2em;
+  transition: all 500ms;
+}
+.icon:hover {
+  color: #c1a01e;
+}
+
+/* Dropdown menu styles */
+.dropdownMenu {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #11111f;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdownMenu.open {
+  display: block;
+}
+
+.dropdownItem {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background-color: #c1a01e;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .menuToggle {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #11111f;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .navLinks.open {
+    display: flex;
+    gap: 5px;
+  }
+
+  .navLink {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 655px) {
+  .logo {
+    max-width: 210px;
+  }
+}

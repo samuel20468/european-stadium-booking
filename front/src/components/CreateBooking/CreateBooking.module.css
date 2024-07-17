@@ -1,0 +1,129 @@
+/* CreateBooking.module.css */
+.modalOverlay {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input,
+.select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[name="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+/* Estilos para el input de tiempo */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+.textDanger {
+  font-size: 0.75rem;
+  color: indianred;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit {
+  background-color: #c1a01e;
+  color: #fff;
+}
+
+.submit:hover {
+  background-color: #af8f1a;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #888;
+}
+
+.submit:disabled:hover {
+  background-color: #ccc;
+  color: #888;
+  border-radius: 0;
+}
+
+.cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancel:hover {
+  background-color: #b3b3b3;
+}

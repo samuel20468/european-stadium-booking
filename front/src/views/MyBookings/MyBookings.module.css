@@ -1,0 +1,118 @@
+/* MyBookings.module.css */
+.container {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+  background-color: #f8f8f8; 
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.addContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.activeBookingsContainer,
+.cancelledBookingsContainer {
+  margin-bottom: 105px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.activeBookings,
+.cancelledBookings {
+  display: flex;
+  flex-direction: column;
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+}
+
+.notFoundText {
+  font-size: 1.3rem;
+  color: #c1a01e;
+  text-align: center;
+  margin-right: 25px;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: #c1a01e;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  font-size: 2.5em;
+  color: black;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* text */
+.text {
+  position: absolute;
+  top: 10px;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 120px;
+  border-radius: 0px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 0%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 80%;
+  transition-duration: 0.3s;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
